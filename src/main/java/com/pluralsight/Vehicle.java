@@ -1,5 +1,7 @@
 package com.pluralsight;
 
+import java.util.Objects;
+
 public class Vehicle {
     private int vin;
     private int year;
@@ -85,4 +87,9 @@ public class Vehicle {
     public void setPrice(double price) {
         this.price = price;
     }
+    public String getVehicleCsvLine() {
+        return vin + "|" + year + "|" + make + "|" + model + "|" + vehicleType + "|" + color + "|" + odometer + "|" + price;
+    }
+
+
 }
