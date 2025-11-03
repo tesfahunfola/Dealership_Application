@@ -6,7 +6,7 @@ public class DealershipFileManager {
 
     public static Dealership getDealership(String fileName){
 
-        Dealership dealership;
+        Dealership dealership = null;
         try {
 //            dealership object
             BufferedReader br = new BufferedReader(new FileReader(fileName));
@@ -27,7 +27,7 @@ public class DealershipFileManager {
         }catch (IOException e){
             System.out.println(e.getMessage());
         }
-        return null;
+        return dealership;
     }
 
     public static void saveDealership(Dealership dealership, String fileName){
